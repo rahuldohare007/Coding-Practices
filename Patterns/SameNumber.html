@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same Number In Line Pattern</title>
+</head>
+
+<body>
+    <script>
+        let str = "";
+        let count = 0;
+        let userInput = +prompt("Enter number of rows and cols you want: ")
+
+        for (let row = 1; row <= userInput; row++) {
+            count = 0;
+            for (let col = 1; col <= userInput; col++) {
+                //1. str += col;
+
+                count++;
+                str += ` ${count}`
+            }
+            str += '\n';
+        }
+        console.log(str)
+
+        /*
+        
+        1 2 3 4 5
+        1 2 3 4 5
+        1 2 3 4 5
+        1 2 3 4 5
+        1 2 3 4 5 
+        
+        */
+    </script>
+</body>
+
+</html>

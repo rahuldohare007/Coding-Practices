@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Pattern</title>
+</head>
+
+<body>
+    <script>
+        let str = "";
+        let userInput = +prompt("Enter number of rows and cols you want: ")
+
+        for (let i = 1; i <= userInput; i++) {
+            for (let j = 1; j <= userInput; j++) {
+                str += "* ";
+            }
+            str += '\n'
+        }
+        console.log(str)
+
+        /*
+        
+        * * * * *
+        * * * * *
+        * * * * * 
+        * * * * * 
+        * * * * * 
+        
+        */
+    </script>
+</body>
+
+</html>
