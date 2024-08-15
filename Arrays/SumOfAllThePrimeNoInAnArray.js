@@ -18,8 +18,8 @@ function SumAllPrime(array) {
       sum += array[i];
     }
   }
-  console.log("Sum: ", sum);
+  return sum;
 }
 
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-SumAllPrime(array);
+console.log(SumAllPrime(array));
