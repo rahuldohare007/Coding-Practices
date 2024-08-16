@@ -1,3 +1,9 @@
+// * * * * *
+//   *     *
+//     *   *
+//       * *
+//         *
+
 function StarPattern(number) {
   let str = "";
   for (let row = 1; row <= number; row++) {
