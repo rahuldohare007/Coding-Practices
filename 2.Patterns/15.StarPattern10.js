@@ -9,6 +9,7 @@ function StarPattern(number) {
   for (let row = 1; row <= 2 * number - 1; row++) {
     let spaces = number - Math.min(row, 2 * number - row);
 
+    // Calculate space for right alignment
     for (let s = 1; s <= spaces; s++) {
       str += "  ";
     }
