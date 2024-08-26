@@ -1,26 +1,18 @@
-// let str1 = "cal";
-// let str2 = "acl";
+// 1.
+// function CheckAnagram(str1, str2) {
+//   let dummy1 = str1.trim().toLowerCase();
+//   let dummy2 = str2.trim().toLowerCase();
 
-// let str1 = "ball";
-// let str2 = "bal";
+//   let sortedstr1 = str1.split("").sort().join("");
+//   let sortedstr2 = str2.split("").sort().join("");
 
-// let str1 = "silent";
-// let str2 = "listen";
+//   if (dummy1.length !== dummy2.length) return false;
+//   if (sortedstr1 == sortedstr2) return true;
+//   else return false;
+// }
 
-let str1 = "cat";
-let str2 = "dog";
-
+//   2.
 function CheckAnagram(str1, str2) {
-  // 1.
-  //   let dummy1 = str1.trim().toLowerCase();
-  //   let dummy2 = str2.trim().toLowerCase();
-  //   let sortedstr1 = str1.split("").sort().join("");
-  //   let sortedstr2 = str2.split("").sort().join("");
-  //   if (dummy1.length !== dummy2.length) return false;
-  //   if (sortedstr1 == sortedstr2) return true;
-  //   else return false;
-
-  //   2.
   //   To remove space and make lowercase
   str1 = str1.trim().toLowerCase();
   str2 = str2.trim().toLowerCase();
@@ -33,11 +25,7 @@ function CheckAnagram(str1, str2) {
   function findOccurrence(str) {
     let obj = {};
     for (let i = 0; i < str.length; i++) {
-      if (obj[str[i]]) {
-        obj[str[i]] = obj[str[i]] + 1;
-      } else {
-        obj[str[i]] = 1;
-      }
+      obj[str[i]] = (obj[str[i]] || 0) + 1;
     }
     return obj;
   }
@@ -47,4 +35,17 @@ function CheckAnagram(str1, str2) {
   }
   return true;
 }
+
+// let str1 = "cal";
+// let str2 = "acl";
+
+// let str1 = "ball";
+// let str2 = "bal";
+
+// let str1 = "silent";
+// let str2 = "listen";
+
+let str1 = "cat";
+let str2 = "dog";
+
 console.log(CheckAnagram(str1, str2));

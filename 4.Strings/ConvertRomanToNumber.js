@@ -1,4 +1,4 @@
-function romanToInt(s) {
+function RomanStringToNumber(str) {
   const romanMap = {
     I: 1,
     V: 5,
@@ -18,9 +18,10 @@ function romanToInt(s) {
 
   let total = 0;
 
-  for (let i = 0; i < s.length; i++) {
-    const currentVal = romanMap[s[i]];
-    const nextVal = romanMap[s[i + 1]];
+  for (let i = 0; i < str.length; i++) {
+    const currentVal = romanMap[str[i]];
+    const nextVal = romanMap[str[i + 1]];
+
     if (nextVal && nextVal > currentVal) {
       total -= currentVal;
     } else {
@@ -31,14 +32,14 @@ function romanToInt(s) {
   return total;
 }
 
-console.log(romanToInt("III")); // Output: 3
-console.log(romanToInt("IV")); // Output: 4
-console.log(romanToInt("IX")); // Output: 9
-console.log(romanToInt("LVIII")); // Output: 58
-console.log(romanToInt("MCMXCIV")); // Output: 1994
+console.log(RomanStringToNumber("III")); // Output: 3
+console.log(RomanStringToNumber("IV")); // Output: 4
+console.log(RomanStringToNumber("IX")); // Output: 9
+console.log(RomanStringToNumber("LVIII")); // Output: 58
+console.log(RomanStringToNumber("MCMXCIV")); // Output: 1994
 
-console.log(romanToInt("iii")); // Output: 3
-console.log(romanToInt("iv")); // Output: 4
-console.log(romanToInt("ix")); // Output: 9
-console.log(romanToInt("lviii")); // Output: 58
-console.log(romanToInt("mcmxciv")); // Output: 1994
+console.log(RomanStringToNumber("iii")); // Output: 3
+console.log(RomanStringToNumber("iv")); // Output: 4
+console.log(RomanStringToNumber("ix")); // Output: 9
+console.log(RomanStringToNumber("lviii")); // Output: 58
+console.log(RomanStringToNumber("mcmxciv")); // Output: 1994

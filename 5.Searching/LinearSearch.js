@@ -1,8 +1,8 @@
 function LinearSearch(array, target) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == target) return true;
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] === target) return index;
   }
-  return false;
+  return -1;
 }
 
 let array = [1, 5, 69, 420, 500, 56];

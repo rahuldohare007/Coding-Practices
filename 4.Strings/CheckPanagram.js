@@ -1,12 +1,13 @@
 function CheckPanagram(str) {
-  let alphabates = "abcdefghijklmnopqrstuvwxyz";
+  let alphabets = "abcdefghijklmnopqrstuvwxyz";
   str = str.toLowerCase();
 
-  for (let char of alphabates) {
+  for (let char of alphabets) {
     if (!str.includes(char)) {
       return false;
     }
   }
+  
   return true;
 }
 

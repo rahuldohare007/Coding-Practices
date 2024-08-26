@@ -1,19 +1,49 @@
-let str = "abcabdeac";
-let unique = "";
+// 1.
+function RemoveDuplicates(str) {
+  let frequency = {};
+  let unique = "";
 
-while (str.length > 0) {
-  let newStr = "";
-  let char = str[0];
-  let flag = false;
-  for (let i = 1; i < str.length; i++) {
-    if (str[i] == char) {
-      flag = true;
-    } else {
-      newStr += str[i];
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (char !== " ") {
+      frequency[char] ? frequency[char]++ : (frequency[char] = 1);
     }
   }
-  str = newStr;
-  unique += str;
+
+  for (let key in frequency) {
+    unique += key;
+  }
+
+  console.log(unique);
 }
 
-console.log(unique); //abcde
+// 2.
+function RemoveDuplicates(str) {
+  let unique = "";
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    // Skip spaces
+    if (char === " ") continue;
+
+    // Check if the character is already in the unique string
+    let isDuplicate = false;
+    for (let j = 0; j < unique.length; j++) {
+      if (unique[j] === char) {
+        isDuplicate = true;
+        break;
+      }
+    }
+
+    // If it's not a duplicate, add it to the unique string
+    if (!isDuplicate) {
+      unique += char;
+    }
+  }
+
+  console.log(unique);
+}
+
+let str = "abcabdeac aecerc";
+RemoveDuplicates(str);
