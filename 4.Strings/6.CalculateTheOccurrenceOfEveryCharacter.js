@@ -4,8 +4,8 @@ function CalculateTheOccurrenceOfEveryCharacter(str) {
 
   for (let char of str) {
     if (char !== " ") {
-      frequency[char] ? frequency[char]++ : (frequency[char] = 1);
-      //   frequency[char] = (frequency[char] || 0) + 1;
+      // frequency[char] ? frequency[char]++ : (frequency[char] = 1)
+      frequency[char] = (frequency[char] || 0) + 1;
     }
   }
 

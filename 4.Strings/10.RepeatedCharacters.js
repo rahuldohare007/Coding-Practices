@@ -1,4 +1,24 @@
 // 1.
+function findRepeatedCharacters(str) {
+  let frequency = {};
+  let repeatedChar = "";
+
+  for (let char of str) {
+    if (char !== " ") {
+      frequency[char] = (frequency[char] || 0) + 1;
+    }
+  }
+
+  for (let key in frequency) {
+    if (frequency[key] > 1) {
+      repeatedChar += key;
+    }
+  }
+
+  console.log(repeatedChar);
+}
+
+// 2.
 // function findRepeatedCharacters(str) {
 //   let Repeated = "";
 
@@ -26,26 +46,6 @@
 
 //   console.log(Repeated);
 // }
-
-// 2.
-function findRepeatedCharacters(str) {
-  let frequency = {};
-  let Repeated = "";
-
-  for(let char of str){
-    if (char !== " ") {
-      frequency[char] ? frequency[char]++ : (frequency[char] = 1);
-    }
-  }
-
-  for (let key in frequency) {
-    if (frequency[key] > 1) {
-      Repeated += key;
-    }
-  }
-
-  console.log(Repeated);
-}
 
 let str = "Javascript is awesome";
 

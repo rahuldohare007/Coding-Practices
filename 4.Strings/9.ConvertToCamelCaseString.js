@@ -3,7 +3,7 @@ function ConvertToCamelCaseString(str) {
 
   for (let i = 0; i < str.length; i++) {
     if (i === 0) {
-      result += str[i].toLowerCase();
+      result += str[0].toLowerCase();
     } else if (str[i - 1] === " ") {
       result += str[i].toUpperCase();
     } else if (str[i] !== " ") {
@@ -13,7 +13,6 @@ function ConvertToCamelCaseString(str) {
 
   console.log(result);
 }
-
 let str = "Welcome to javascript";
 
 ConvertToCamelCaseString(str); //welcomeToJavascript
