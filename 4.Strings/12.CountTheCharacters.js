@@ -35,6 +35,7 @@ function CountTheCharacters(str) {
 //   console.log(result);
 // }
 
+
 let str = "aabbccca affkk";
 
 CountTheCharacters(str);

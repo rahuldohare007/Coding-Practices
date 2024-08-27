@@ -22,6 +22,6 @@ function PSS(str) {
   console.log(result.length);
 }
 
-let str = "ababa";
-// let str = "aba";
+// let str = "ababa";
+let str = "aba";
 PSS(str);

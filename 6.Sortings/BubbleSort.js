@@ -35,7 +35,7 @@ BubbleSort2(array);
 console.log(array);
 
 // Time Complexity
-// Best Case: O(n^2)
+// Best Case: O(n)
 // Avg. Case: O(n^2)
 // Worst Case: O(n^2)
 
