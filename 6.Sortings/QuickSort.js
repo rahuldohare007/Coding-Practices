@@ -2,6 +2,7 @@ const array = [-Infinity, 9, 4, 0.1, 800, 90];
 
 function QuickSort(array) {
   if (array.length < 2) return array;
+  
   let pivot = array[0];
   let leftArr = [],
     rightArr = [];

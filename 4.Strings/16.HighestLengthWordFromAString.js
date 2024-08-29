@@ -4,7 +4,8 @@ function HighestLengthWord(str) {
   let maxWord = "";
 
   for (let word of words) {
-    //words.forEach((word) => {same})
+    // words.forEach((word) => { same });
+
     if (word.length > maxWord.length) {
       maxWord = word;
     }

@@ -1,24 +1,25 @@
-let array = [40, 69, 1, 8, -Infinity, Infinity, 100];
-let arraySize = array.length;
-
 function SelectionSort(array) {
+  let arraySize = array.length;
+
   for (let i = 0; i < arraySize - 1; i++) {
     let minIndex = i;
+
     for (let j = i + 1; j < arraySize; j++) {
       if (array[j] < array[minIndex]) {
         minIndex = j;
       }
     }
     if (minIndex !== i) {
-      let temp = array[minIndex];
-      array[minIndex] = array[i];
-      array[i] = temp;
+      [array[minIndex], array[i]] = [array[i], array[minIndex]];
     }
   }
+
   return array;
 }
 
+let array = [40, 69, 1, 8, -Infinity, Infinity, 100];
 SelectionSort(array);
+
 console.log(array);
 
 // Time Complexity

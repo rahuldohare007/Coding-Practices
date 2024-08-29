@@ -1,6 +1,6 @@
 function PlaceTheCharactersInString(str1, str2) {
-  let result = "";
   let str2Index = 0;
+  let result = "";
 
   for (let i = 0; i < str1.length; i++) {
     if (isNaN(str1[i])) {

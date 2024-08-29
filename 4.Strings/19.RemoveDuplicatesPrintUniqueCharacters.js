@@ -1,12 +1,10 @@
-// 1.
 function RemoveDuplicates(str) {
-  let frequency = {};
   let unique = "";
+  let frequency = {};
 
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
+  for (let char of str) {
     if (char !== " ") {
-      frequency[char] ? frequency[char]++ : (frequency[char] = 1);
+      frequency[char] = (frequency[char] || 0) + 1;
     }
   }
 
@@ -46,4 +44,5 @@ function RemoveDuplicates(str) {
 }
 
 let str = "abcabdeac aecerc";
+
 RemoveDuplicates(str);
