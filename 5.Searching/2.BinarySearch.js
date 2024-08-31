@@ -1,3 +1,4 @@
+// 1.
 function binarySearchIterative(
   sortedArray,
   searchElement,
@@ -5,7 +6,7 @@ function binarySearchIterative(
   right = sortedArray.length - 1
 ) {
   while (left <= right) {
-    let mid = Math.trunc((left + right) / 2);
+    const mid = Math.trunc((left + right) / 2);
 
     if (sortedArray[mid] === searchElement) {
       return mid;
@@ -19,6 +20,7 @@ function binarySearchIterative(
   return -1;
 }
 
+// 2.
 function binarySearchRecursive(
   sortedArray,
   searchElement,
@@ -28,13 +30,12 @@ function binarySearchRecursive(
   if (left > right) {
     return -1;
   }
-
-  let mid = Math.trunc((left + right) / 2);
+  const mid = Math.trunc((left + right) / 2);
 
   if (sortedArray[mid] === searchElement) {
     return mid;
   }
-
+  
   if (sortedArray[mid] < searchElement) {
     return binarySearchRecursive(sortedArray, searchElement, mid + 1, right);
   } else {
@@ -43,16 +44,7 @@ function binarySearchRecursive(
 }
 
 const sortedArray = [10, 20, 30, 40, 50, 60];
-const searchElement = 69;
+const searchElement = 60;
 
 console.log(binarySearchIterative(sortedArray, searchElement));
 console.log(binarySearchRecursive(sortedArray, searchElement));
-
-// Time Complexity (For both the case Iterative and Recursive)
-// Best Case: O(1)
-// Avg. Case: O(log n)
-// Worst Case: O(log n)
-
-// Space Complexity
-// Iterative: O(1)
-// Recursive: O(log n)
