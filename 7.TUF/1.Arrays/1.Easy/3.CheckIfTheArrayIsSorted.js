@@ -16,7 +16,7 @@ function CheckSorted(nums) {
 }
 
 const nums = [3, 4, 5, 1, 2];
-console.log(CheckSorted(nums));
+console.log(CheckSorted(nums)); //true
 
 // Time Complexity = O(n)
 // Space Complexity = O(1)

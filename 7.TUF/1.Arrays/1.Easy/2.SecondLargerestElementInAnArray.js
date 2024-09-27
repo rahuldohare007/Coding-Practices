@@ -19,7 +19,7 @@ function SecondLargest(arr) {
 }
 
 const arr = [12, 35, 1, 10, 34, 1];
-console.log(SecondLargest(arr));
+console.log(SecondLargest(arr)); // 34
 
 // Time Complexity = O(n)
 // Space Complexity = O(1)
