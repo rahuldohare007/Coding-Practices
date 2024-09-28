@@ -1,5 +1,5 @@
 function twoSum(nums, target) {
-  //    1.
+  //    1.-------------------------------------
   let map = new Map();
 
   for (let i = 0; i < nums.length; i++) {
@@ -10,7 +10,7 @@ function twoSum(nums, target) {
     map.set(nums[i], i);
   }
 
-  //   2.
+  //   2.---------------------------------------
   const pairIdx = {};
 
   for (let i = 0; i < nums.length; i++) {
