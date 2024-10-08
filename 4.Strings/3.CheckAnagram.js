@@ -14,6 +14,9 @@ function CheckAnagram(str1, str2) {
 
 //   2.
 // function CheckAnagram(str1, str2) {
+// Time Complexity = O(n)
+// Space Complexity = O(n)
+
 //   //   To remove space and make lowercase
 //   str1 = str1.trim().toLowerCase();
 //   str2 = str2.trim().toLowerCase();
